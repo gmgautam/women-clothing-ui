@@ -387,7 +387,7 @@
       }
     }
 
-    @media screen and (max-width: 786px) {
+    @media screen and (max-width: 768px) {
       .icon {
         display: block !important;
       }
@@ -1864,8 +1864,8 @@
     </div>
     <!-- main-container -->
     <script>
-      const humb = document.querySelector(".humburger-tab ");
-      const fb = document.querySelector(".fb");
+      const hum = document.querySelector(".humburger-tab ");
+      const f = document.querySelector(".fb");
 
       function openNav() {
         fb.style.display = "none";
@@ -1881,7 +1881,11 @@
       }
 
       function closeNav() {
-        humb.style.display="block"
+        if(window.innerWidth<=768){
+          humb.style.display="flex"
+        }else{
+          humb.style.display="none"
+        }
         fb.style.display = "none";
         const sidebar = document.getElementById("mySidenav");
         sidebar.style.width = "0";
